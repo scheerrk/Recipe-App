@@ -1,0 +1,10 @@
+<mat-card class="card-container">
+    <div class="img-container">
+        <img mat-card-image class="recipeImg" routerLink="/viewrecipe/{{recipe.id}}" src="{{recipe.photoUrl}}"
+            alt="recipe image">
+        <mat-icon class="bookmark" (click)="openCollectionDialog()">bookmark_add</mat-icon>
+    </div>
+    <mat-card-header class="c-powder" routerLink="/recipe/{{recipe.id}}">
+        <mat-card-title>{{recipe.title}}</mat-card-title>
+            </mat-card-header>
+</mat-card>

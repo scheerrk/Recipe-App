@@ -1,0 +1,41 @@
+@import "/src/styles/styles.scss";
+
+
+.flex-container {
+  margin: 10px;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $teal;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.flex-container:hover {
+  border: 3px solid $teal;
+}
+
+img {
+  max-height: 50px;
+  margin: 5px;
+  border-radius: 30%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.img-container {
+  flex-basis: 40%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.collection-title {
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 2px;
+  text-align: left;
+}

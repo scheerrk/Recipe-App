@@ -1,0 +1,79 @@
+@import "/src/styles/styles.scss";
+
+.mat-toolbar {
+  background-color: $watermelon;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 42px;
+  height: 42px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+::ng-deep .mat-icon {
+  font-size: 40px;
+}
+
+.menu-opened {
+  transform: rotateX(180deg);
+}
+
+.menu-closed {
+  transform: rotate(0deg);
+}
+
+::ng-deep .mat-badge-content {
+  margin-top: 5px;
+  background-color: $teal !important;
+  color: $powder !important;
+}
+
+::ng-deep .mat-menu {
+  flex-direction: column !important;
+}
+
+::ng-deep .mat-menu-panel {
+  border: 1px solid $powder;
+  max-width: 200px !important;
+}
+
+::ng-deep .mat-menu-item {
+  display: inline-flex !important;
+}
+
+::ng-deep .mat-menu-item img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  ::ng-deep .mat-chip {
+    max-width: 65px !important;
+    font-size: 12px !important;
+    text-align: left;
+    padding: 4px !important;
+  }
+
+  img {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+
+  ::ng-deep .mat-icon {
+    font-size: 30px;
+  }
+
+  ::ng-deep .mat-badge-content {
+    margin-top: 6px;
+    right: -6px !important;
+    }
+}

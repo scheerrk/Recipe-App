@@ -1,0 +1,43 @@
+<div class="flex-container">
+    <div>
+        <div class="avatar-container">
+            <img src="/assets/images/account_circle-white-24dp.svg" alt="user image" class="filter-powder">
+            <!-- <img src="{{activeUser?.photoUrl ? activeUser?.photoUrl : '/assets/images/account_circle-white-24dp.svg'" alt="user image" class="filter-powder"> -->
+        </div>
+        <div class="username-container">
+            <h2 class="c-powder">{{activeUser?.displayName}}</h2>
+            <h3 class="c-powder">@{{activeUser?.username}}</h3>
+        </div>
+        <div class="followers-container">
+            <p class="c-white"><a class="c-white" href="#">xx Followers</a>&nbsp;&nbsp;<a class="c-white" href="#">xx
+                    Following</a></p>
+        </div>
+    </div>
+</div>
+<div class="flex-container">
+    <mat-tab-group mat-align-tabs="start" mat-stretch-tabs>
+        <mat-tab label="My Recipes">
+            <div class="new-recipe">
+                <a href="#"><button id="new-recipe" class="done-button" mat-raised-button isRoundButton="true">+ Add
+                        New Recipe</button></a>
+            </div>
+            <div class="recipe-container">
+                <app-recipe-card-tile *ngFor="let recipe of sample_recipes" [recipe]="recipe">
+                </app-recipe-card-tile>
+            </div>
+        </mat-tab>
+        <mat-tab label="Collections">
+            <div class="collection-container">
+                <div class="new-collection">
+                    <button id="new-collection" class="done-button" mat-raised-button isRoundButton="true"
+                        (click)="openCreateCollectionDialog()">+
+                        Add New Collection</button>
+                </div>
+                <div class="collection-container">
+                    <app-collection-card [recipe] [collection]="collection"
+                        *ngFor="let collection of collectionService.collection$ | async"></app-collection-card>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

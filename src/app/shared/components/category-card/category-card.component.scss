@@ -1,0 +1,19 @@
+@import "/src/styles/styles.scss";
+
+::ng-deep .mat-card {
+  margin: 10px;
+  width: 200px;
+  background-repeat: no-repeat !important;
+}
+
+.content {
+  padding: 16px;
+}
+
+::ng-deep .mat-card-content {
+  background-color: rgb(243, 247, 242, 0.5);
+  border-radius: 0.4em;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}

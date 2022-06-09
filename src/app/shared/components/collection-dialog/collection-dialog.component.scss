@@ -1,0 +1,59 @@
+@import "/src/styles/styles.scss";
+
+::ng-deep .mat-dialog-container {
+  margin: 0px !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+::ng-deep .mat-divider {
+  border-top-color: $mint !important;
+  width: 90%;
+  margin: 10px auto 10px auto !important;
+}
+
+.flex-container {
+  justify-content: flex-start;
+  margin: 10px;
+  min-width: 400px;
+  display: flex;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.button-container {
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+::ng-deep .mat-option.mat-active {
+  background: $onyx !important;
+}
+
+::ng-deep .mat-list-base {
+  padding-top: 0 !important;
+}
+
+::ng-deep .mat-list-base .mat-list-item {
+  min-height: 24px !important;
+  height: auto !important;
+}
+
+::ng-deep .mat-list-item {
+  color: $powder !important;
+  align-items: flex-start;
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+  border-color: $mint;
+}
+
+::ng-deep .mat-checkbox-layout {
+  font-size: 20px;
+  margin-bottom: 5px;
+}

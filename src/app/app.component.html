@@ -1,0 +1,33 @@
+<app-header *ngIf="!router.url.includes('/login')"></app-header>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+<div class="mobile-nav" fxShow.sm="true" fxShow.lt-sm="true" fxShow.gt-sm="false">
+    <div class="mobile-nav-buttons">
+    <button mat-icon-button (click)="openSearchDialog()">
+      <mat-icon class="search c-powder">search</mat-icon>
+    </button>
+    <button mat-icon-button (click)="addRecipe()">
+      <mat-icon class="add c-powder">add</mat-icon>
+    </button>
+    <button mat-icon-button class="c-powder" matBadge="15" matBadgeColor="warn" [matMenuTriggerFor]="notifications">
+      <mat-icon class="notification">notifications_active</mat-icon>
+    </button>
+    <span class="cdk-visually-hidden">
+      notification icon with overlaid badge showing the number of notifications </span>
+    <mat-menu #notifications="matMenu" class="bg-onyx">
+      <p>This is where account notifications will live.</p>
+    </mat-menu>
+    <button mat-icon-button routerLink="/profile">
+      <mat-icon class="account c-powder">account_circle</mat-icon>
+    </button>
+</div>
+  </div>
+<div *ngIf="!router.url.includes('/login') && !router.url.includes('/error')" class="flex-container"  style="position:relative!important;padding:15px;" fxShow.sm="false" fxShow.lt-sm="false" fxShow.gt-sm="true">
+    <button (click)="addRecipe()" fxShow.lt-sm="false" fxShow.gt-sm="true" fxShow.sm="false" mat-fab class="bg-teal fab-button" aria-label="create button" style="position:fixed!important;">
+        <img src="assets/images/addwhite.svg" alt="create" class="filter-powder">
+    </button>
+    <button (click)="addRecipe()" fxShow.sm="true" fxShow.lt-sm="true" fxShow.gt-sm="false" mat-mini-fab class="bg-teal fab-button" aria-label="create button mobile" style="position:fixed!important;">
+        <img src="assets/images/addwhite.svg" alt="create" class="filter-powder">
+    </button>
+</div>

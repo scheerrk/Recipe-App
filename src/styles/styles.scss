@@ -1,0 +1,309 @@
+@import "./theme.scss";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Montserrat&family=Playfair+Display&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: $onyx !important;
+}
+
+.mat-icon {
+  font-family: "Material Icons" !important;
+}
+
+body > * {
+  font-family: "Dosis", sans-serif !important;
+}
+
+p {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18.7167px;
+}
+h5 {
+  font-size: 13.2833x;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-family: "Playfair Display", serif !important;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18.7167px;
+  }
+  h5 {
+    font-size: 13.2833x;
+  }
+
+  body p {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 16px;
+  }
+}
+
+/*use this style of button for end of process actions*/
+.done-button {
+  background-color: $mint !important;
+  color: $black !important;
+ }
+
+/*use this button for secondary actions (edit, back, change, etc.)*/
+.edit-button {
+  background-color: $powder !important;
+  color: $jet !important;
+}
+
+/*fitlers svg icons*/
+.filter-powder {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(3027%)
+    hue-rotate(174deg) brightness(102%) contrast(93%);
+}
+
+.filter-onyx {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(0%) saturate(7473%)
+    hue-rotate(27deg) brightness(87%) contrast(107%);
+}
+
+.filter-jet {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(63%) saturate(18%)
+    hue-rotate(338deg) brightness(93%) contrast(88%);
+}
+
+.filter-watermelon {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(12%) saturate(2643%)
+    hue-rotate(316deg) brightness(107%) contrast(111%);
+}
+
+.filter-mint{
+  filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(650%) hue-rotate(57deg) brightness(89%) contrast(91%);
+}
+
+.snackbar {
+  background-color: $onyx;
+  border: 1px solid $powder;
+  text-align: center;
+  justify-content: center !important;
+  width: 20px !important;
+}
+
+/*Form Styling*/
+
+// Do not need ::ng-deep when placing these overrides in global stylesheet.
+//    -> global meaning that this stylesheet is defined in angular.json
+// Only need to use ::ng-deep in component-specific stylesheet to override a global style
+// ::ng-deep
+.mat-form-field {
+  .mat-input-element {
+    color: $powder;
+    caret-color: $white !important;
+  }
+  .mat-form-field-label {
+    color: grey;
+  }
+  .mat-form-field-underline::before {
+    background-color: $teal !important;
+  }
+  .mat-form-field-underline {
+    background-color: $teal !important;
+  }
+  .mat-form-field-ripple {
+    background-color: $mint !important;
+  }
+  .mat-form-field-required-marker {
+    color: $watermelon !important;
+  }
+  .mat-form-field-flex {
+    background-color: $onyx;
+  }
+  .mat-form-field-empty {
+    color: grey !important;
+  }
+}
+
+.mat-error {
+  color: $watermelon !important;
+}
+
+.mat-form-field.mat-form-field-invalid {
+  // Invalid form styling here
+  .mat-input-element {
+    caret-color: $watermelon !important;
+  }
+  .mat-form-field-underline::before {
+    background-color: $watermelon !important;
+  }
+  .mat-form-field-underline {
+    background-color: $watermelon !important;
+  }
+  .mat-form-field-ripple {
+    background-color: $watermelon !important;
+  }
+  .mat-form-field-required-marker {
+    color: $watermelon !important;
+  }
+  .mat-form-field-label {
+    color: $watermelon !important;
+  }
+}
+
+.mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: grey;
+  }
+  .mat-form-field-ripple {
+    background-color: $metal;
+  }
+  .mat-input-element {
+    color: $powder;
+    caret-color: $white;
+  }
+}
+
+.mat-autocomplete-trigger::placeholder {
+  color: grey !important;
+}
+
+textarea::placeholder {
+  color: grey !important;
+}
+
+input::placeholder {
+  color: grey !important;
+}
+
+.mat-form-field-flex {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 5px 5px 0px;
+}
+
+.mat-option {
+  background-color: $onyx;
+}
+
+.mat-option:hover {
+  background-color: $jet !important;
+}
+
+.mat-option:active {
+  background-color: $jet !important;
+}
+
+.mat-option.mat-selected[_ngcontent-cqo-c120]:not(.mat-option-multiple):not(.mat-option-disabled) {
+  background: $jet !important;
+}
+.mat-option.mat-selected[_ngcontent-ile-c120]:not(.mat-option-multiple):not(.mat-option-disabled) {
+  background: $jet !important;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: $jet !important;
+}
+.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover) {
+  background: $jet !important;
+}
+.mat-option > * {
+  color: $powder;
+}
+
+/*End Form Styling*/
+.mat-chip-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -4px;
+  margin-top: -4px;
+  margin-right: -4px;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+.mat-chip-list-wrapper {
+  margin: 0px !important;
+}
+.ordered-chips {
+  display: inline-block !important;
+  margin: 0px 6px 5px;
+  height: auto !important;
+  overflow-wrap: break-word !important;
+}
+
+.mat-chip-list-stacked.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  // width: 83.5% !important;
+}
+.mat-chip-list-stacked.cdk-drop-list-dragging {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  // width: 83.5% !important;
+}
+
+.mat-chip.mat-standard-chip {
+  background-color: $teal !important;
+  color: $white !important;
+  border: $mint 2px solid;
+}
+
+
+/* Mat Dialog for Input Recipe */
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.87);
+}
+
+.dialog-container .mat-dialog-container {
+  background-color: $black;
+  box-shadow: 0px 0px 40px grey;
+  max-height: 90vh;
+  overflow: auto;
+  padding-bottom: 20px;
+  width: 80vh;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .dialog-container .mat-dialog-container {
+    width: 100vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .dialog-container .mat-dialog-container {
+    width: 100vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .dialog-container .mat-dialog-container {
+    width: 80vh;
+  }
+}

@@ -1,0 +1,12 @@
+<mat-dialog-content>
+    <img src="/assets/images/logo.svg" class="filter-jet">
+    <div class="container">
+        <button [ngClass]="error ? 'button-error' : '' " id="Google-Button" (click)="googleLogin()" class="dark-button bg-teal" mat-raised-button isRoundButton="true"><i class="fa fa-google fa-2x"></i>Continue with Google</button>
+        <button [ngClass]="error ? 'button-error' : '' " id="GitHub-Button" (click)="githubLogin()" class="dark-button bg-teal" mat-raised-button isRoundButton="true"><i class="fa fa-github fa-2x"></i>Continue with Github</button>
+        <div *ngIf="error" class="auth-error c-watermelon">{{ error }}</div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <p>By continuing, you agree to this site's <a href="#">Terms
+            of Service</a>and <a href="#">Privacy Policy</a>.</p>
+</mat-dialog-actions>

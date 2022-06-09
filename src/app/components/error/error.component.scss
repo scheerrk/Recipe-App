@@ -1,0 +1,9 @@
+@import "/src/styles/styles.scss";
+.error-modal{
+    width: 50vw;
+    height: 35vh;
+    margin-top: 25vh; 
+    margin-left: 25vw;
+    border: .5px solid $watermelon;
+    text-align: center;
+}

@@ -1,0 +1,114 @@
+// Import material theming functions
+@import '~@angular/material/theming';
+@import './palette';
+@include mat-core();
+
+// ----------------------------------- //
+// ----------------------------------- //
+
+$teal: mat-color($md-teal, 500);
+$powder: mat-color($md-powder, 500);
+$white: mat-color($md-white, 500);
+$black: mat-color($md-black, 500);
+$jet: mat-color($md-jet, 500);
+$onyx: mat-color($md-onyx, 500);
+$watermelon: mat-color($md-watermelon, 500);
+$metal: mat-color($md-metal, 500);
+$mint: mat-color($md-mint, 500);
+$white: mat-color($md-white, 500);
+
+// ----------------------------------- //
+// ----------------------------------- //
+
+
+$default-primary:  mat-palette($md-mint, 500, 200, 900);
+$default-accent: mat-palette($md-mint, 500, 200, 900);
+$default-warn:    mat-palette($md-watermelon, A100, 300, 900);
+
+
+$default-app-theme: mat-light-theme(
+    $default-primary,
+    $default-accent,
+    $default-warn
+);
+
+
+$secondary-primary: mat-palette($md-onyx);
+$secondary-accent: mat-palette($md-powder, A200, A100, A400);
+$secondary-warn: mat-palette($md-watermelon);
+$secondary-theme: mat-light-theme(
+    $secondary-primary,
+    $secondary-accent,
+    $secondary-warn
+);
+
+@include angular-material-theme($default-app-theme);
+
+.secondary-theme{
+  @include angular-material-color($secondary-theme);
+}
+
+
+// ----------------------------------- //
+// ----------------------------------- //
+
+.dark-button{
+    background-color: $onyx!important;
+    color: $powder!important;
+}
+.light-button{
+    background-color: $powder!important;
+    color: $black!important;
+}
+
+// ----------------------------------- //
+// ----------------------------------- //
+
+.bg-teal{
+    background-color: $teal!important;
+}
+.bg-powder{
+    background-color: $powder!important;
+}
+.bg-watermelon{
+    background-color: $watermelon!important;
+}
+.bg-jet{
+    background-color: $jet!important;
+}
+.bg-onyx{
+    background-color: $onyx!important;
+}
+.bg-metal{
+    background-color: $metal!important;
+}
+.bg-mint{
+    background-color: $mint!important;
+}
+.c-black{
+    color: $black!important;
+}
+.c-white{
+    color: $white!important;
+}
+.c-powder{
+    color: $powder!important;
+}
+.c-mint{
+    color: $mint!important;
+}
+.c-watermelon{
+    color: $watermelon!important;
+}
+.c-teal{
+    color: $teal!important;
+}
+.c-metal{
+    color: $metal!important;
+}
+.c-onyx{
+    color: $onyx!important;
+}
+.c-jet{
+    color: $jet!important;
+}

@@ -1,0 +1,35 @@
+@import "/src/styles/styles.scss";
+.container {
+  max-height: 80vh;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: center;
+  position: relative !important;
+   }  
+
+.mobile-nav-buttons {
+  display: flex;
+  border-radius: 40px;
+  justify-content: center;
+  width: auto;
+  margin: 10px;
+  background-color: $onyx;
+  position: fixed !important;
+  padding: 2px;
+}
+
+::ng-deep .mat-icon-button {
+  margin: 5px !important;
+}
+
+.flex-container {
+    justify-content: flex-end;
+    display: flex;
+    position: relative;
+  }
+  
+.fab-button {
+    margin-right: 10px;
+  }

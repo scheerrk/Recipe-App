@@ -1,0 +1,280 @@
+@import "/src/styles/styles.scss";
+
+.page {
+  background-color: $metal;
+  width: 80%;
+  margin: 3% 10% 3% 10%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  padding-top: 5%;
+}
+
+h2,
+h1,
+h3,
+label {
+  color: $powder;
+}
+
+.title {
+  font-size: 48px !important;
+  text-align: center;
+  margin: 0;
+}
+
+.recipeImg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: left;
+  margin-left: 8%;
+  object-fit: contain;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.owner-container {
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+  margin: 5px 0 50px 0;
+}
+
+.owner {
+  margin: 5px 0 6px 20px;
+}
+
+.time {
+  text-align: center;
+  line-height: 5px;
+  margin-bottom: 20%;
+}
+
+.nutrition-mobile {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  vertical-align: bottom;
+}
+
+.fab-buttons {
+  margin: 8px !important;
+  text-align: center !important;
+}
+
+.fab {
+  font-size: 30px;
+  margin: -2px 5.5px 10px 0;
+  color: $onyx;
+}
+
+.mini-fab {
+  font-size: 25px;
+  color: $onyx;
+}
+
+.nutrition-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: right;
+  margin-right: 8%;
+}
+
+.nutrition-web {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+::ng-deep .mat-divider {
+  border-top-color: $mint !important;
+  width: 90%;
+  margin: 10px auto 10px auto !important;
+}
+
+.prepareRecipe {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+
+.ingContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: left;
+  margin-left: 30%;
+}
+
+::ng-deep .mat-list-base {
+  padding-top: 0 !important;
+}
+
+::ng-deep .mat-list-base .mat-list-item {
+  min-height: 24px !important;
+  height: auto !important;
+}
+
+::ng-deep .mat-list-item {
+  color: $powder !important;
+  align-items: flex-start;
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+  border-color: $mint;
+}
+
+.shop-button {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0 15px 0;
+}
+
+.mobile-divider {
+  display: none;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 23%;
+}
+
+.instructions-list:hover .instructions-arrow,
+.instructions-list:focus .instructions-arrow {
+  visibility: visible;
+}
+
+.instructions-text {
+  margin: 0 0 8px 0;
+}
+
+.instructions-arrow {
+  visibility: hidden;
+  align-self: start;
+  font-size: 35px;
+  margin: 0 10px 15px 0;
+}
+
+.instructions-Strikethrough {
+  text-decoration: line-through;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+  ::ng-deep .mat-list-base .mat-list-item {
+    font-size: 12px !important;
+  }
+
+  .page {
+    background-color: $metal;
+    width: 90%;
+    margin: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    padding-top: 5%;
+    margin-bottom: 30px;
+  }
+
+  .recipeImg {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: left;
+    margin-left: 0;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .owner-container {
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    margin: 5px 0 30px 0;
+  }
+
+  .time {
+    text-align: center;
+    line-height: 5px;
+    margin-bottom: 30px;
+  }
+
+  .nutrition-mobile {
+    margin-bottom: 10px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nutrition-column {
+    display: none;
+  }
+
+   .prepareRecipe {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .ingContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 8%;
+  }
+
+  .shop-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .instructions-arrow {
+    visibility: hidden;
+    align-self: start;
+    font-size: 35px;
+    margin: 0 10px 20px 0;
+  }
+
+  .mobile-divider {
+    display: flex;
+    border-top-color: $mint !important;
+    width: 90%;
+    margin: 10px auto 10px auto !important;
+  }
+
+  .instructions-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+}

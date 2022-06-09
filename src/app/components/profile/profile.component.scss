@@ -1,0 +1,85 @@
+@import "/src/styles/styles.scss";
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+
+.avatar-container,
+.followers-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.username-container {
+  text-align: center;
+}
+
+.collection-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+img {
+  width: 100px;
+}
+
+.mat-tab-group {
+  width: 80%;
+}
+
+.mat-tab {
+  width: 100%;
+}
+
+.mat-tab-body {
+  width: 100%;
+}
+
+.new-recipe {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+button {
+  margin: 20px;
+}
+
+::ng-deep .mat-tab-label-content {
+  color: $powder !important;
+}
+
+.mat-tab-label {
+  max-width: 50% !important;
+  min-width: 0 !important;
+}
+
+.mat-tab-label-container {
+  width: 100% !important;
+}
+
+h3 {
+  opacity: 70%;
+}

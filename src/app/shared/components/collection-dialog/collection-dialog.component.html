@@ -1,0 +1,15 @@
+<mat-dialog-content class="planning bg-jet">
+    <h1 class="c-powder">Add Recipe to:</h1>
+    <mat-divider></mat-divider>
+    <div class="flex-container">
+        <mat-list>
+            <mat-list-item *ngFor="let collection of collectionService.collection$ | async">
+                <mat-checkbox>{{collection?.collectionName}}</mat-checkbox>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    <div class="button-container">
+        <button mat-raised-button (click)="openCreateCollectionDialog()">+ Create Collection</button>
+        <button mat-raised-button class="done-button" (click)="saveRecipe()">Add Recipe</button>
+    </div>
+</mat-dialog-content>

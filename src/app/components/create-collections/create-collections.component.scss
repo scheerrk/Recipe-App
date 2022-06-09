@@ -1,0 +1,22 @@
+@import "/src/styles/styles.scss";
+
+::ng-deep .mat-dialog-container{
+    background-color: $mint !important;
+    min-width: 400px;
+}
+
+::ng-deep .mat-form-field{
+    width: 95%;
+}
+
+::ng-deep .mat-form-field .mat-form-field-flex{
+    background-color: white;
+    text-decoration-color: black;
+}
+
+::ng-deep .mat-form-field .mat-input-element{
+    color: black !important;
+}
+
+
+ 

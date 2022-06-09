@@ -1,0 +1,108 @@
+<div class="page">
+  <div class="container">
+    <section class="recipeImg">
+      <div class="image">
+        <img src="/assets/images/452078e959acefeb64f8fcfea2336e51.jpg" alt="recipe image">
+      </div>
+    </section>
+    <section class="information">
+      <h1 class="title">{{recipe?.title}}</h1>
+      <div class="owner-container">
+        <mat-icon class="c-powder">account_circle</mat-icon>
+        <h3 class="owner">Recipe Owner Display Name</h3>
+      </div>
+      <div class="time">
+        <h3>Prep Time: {{recipe?.prepTime}}Min</h3>
+        <h3>Cook Time: {{recipe?.cookTime}}Min</h3>
+      </div>
+      <div class="nutrition-mobile">
+        <img src="/assets/images/nutrition.jpg" alt="nutritional information" class="nutrition-img">
+      </div>
+      <div class="actions" fxShow.lt-sm="false" fxShow.gt-sm="true" fxShow.sm="false">
+        <button mat-fab class="fab-buttons">
+          <mat-icon class="fab">thumb_up_alt</mat-icon>
+        </button>
+        <button mat-fab class="fab-buttons">
+          <mat-icon class="fab">restaurant_menu</mat-icon>
+        </button>
+        <button mat-fab class="fab-buttons">
+          <mat-icon class="fab" (click)="openCollectionDialog()">bookmark</mat-icon>
+        </button>
+        <button  mat-fab class="fab-buttons" (click)="editRecipeDialog()">
+          <mat-icon class="fab" (click)="editRecipeDialog()">edit</mat-icon>
+        </button>
+      </div>
+      <div class="actions" fxShow.sm="true" fxShow.lt-sm="true" fxShow.gt-sm="false">
+        <button mat-mini-fab class="fab-buttons">
+          <mat-icon class="mini-fab">thumb_up_alt</mat-icon>
+        </button>
+        <button mat-mini-fab class="fab-buttons">
+          <mat-icon class="mini-fab">restaurant_menu</mat-icon>
+        </button>
+        <button mat-mini-fab class="fab-buttons">
+          <mat-icon class="mini-fab">bookmark</mat-icon>
+        </button>
+        <button mat-mini-fab  (click)="editRecipeDialog()" class="fab-buttons">
+          <mat-icon (click)="editRecipeDialog()" class="mini-fab">edit</mat-icon>
+        </button>
+      </div>
+    </section>
+    <section class="nutrition-column">
+      <div class="nutrition-web">
+        <img src="/assets/images/nutrition.jpg" alt="nutritional information" class="nutrition-img">
+      </div>
+    </section>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="prepareRecipe">
+    <section class="ingContainer">
+      <h3>INGREDIENTS</h3>
+      <mat-list *ngFor="let ingredient of ingredients">
+        <mat-list-item id="ingredient" name="ingredient" value="Ingredient">
+          <mat-checkbox color='mint'>{{ingredient?.content}}</mat-checkbox>
+        </mat-list-item>
+      </mat-list>
+      <div class="shop-button">
+        <app-button [label]="'Add Selected to Shopping List'" (clickEvent)="($event)" [class]="'edit-button'">
+        </app-button>
+      </div>
+    </section>
+    <mat-divider class="mobile-divider"></mat-divider>
+    <section class="instructions-container">
+      <h2>INSTRUCTIONS</h2>
+      <mat-list>
+        <mat-list-item class="instructions-list" *ngFor="let instruction of instructions"
+          (click)="strikethroughText($event)">
+          <mat-icon class="c-mint instructions-arrow">arrow_right_alt</mat-icon><span
+            class="instructions-text">{{instruction?.content}}</span>
+        </mat-list-item>
+      </mat-list>
+    </section>
+  </div>
+  <mat-divider></mat-divider>
+
+
+
+
+  <section class="nutrition-container">
+    <h2>Nutrition</h2>
+    <mat-list>
+      <mat-list-item class="nutrition-list" *ngFor="let nutrient of combinedNutrients">
+        <mat-icon class="c-mint instructions-arrow">arrow_right_alt</mat-icon><span
+          class="instructions-text">{{nutrient?.name}} : {{nutrient?.amount}} : {{nutrient?.unit}} :
+          {{nutrient?.percentOfDailyNeeds | percent }}</span>
+      </mat-list-item>
+    </mat-list>
+  </section>
+  <mat-divider></mat-divider>
+
+
+  <div class="flex-container">
+    <div class="flex-container">
+      <h2>RELATED RECIPES</h2>
+    </div>
+    <div class="flex-container">
+      <app-recipe-card-tile *ngFor="let recipe of relatedRecipes | async" [recipe]="recipe">
+      </app-recipe-card-tile>
+    </div>
+  </div>

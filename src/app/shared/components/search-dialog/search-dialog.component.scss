@@ -1,0 +1,22 @@
+@import "/src/styles/styles.scss";
+
+::ng-deep.mat-dialog-container {
+  background-color: $powder;
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+::ng-deep .mat-form-field {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+::ng-deep .mat-dialog-actions {
+  justify-content: flex-end;
+  margin: 5px;
+}

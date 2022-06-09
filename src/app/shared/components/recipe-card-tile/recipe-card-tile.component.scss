@@ -1,0 +1,111 @@
+@import "/src/styles/styles.scss";
+
+.card-container {
+  border-radius: 0.25em;
+  justify-content: space-between;
+  margin: 5px;
+  width: 200px;
+}
+
+::ng-deep .mat-card {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.mat-card-header:hover,
+.img-container:hover,
+.mat-card-actions:hover {
+  cursor: pointer;
+}
+
+::ng-deep .mat-card-header-text {
+  margin: 0 !important;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.bookmark {
+  visibility: hidden;
+}
+
+.mobile-bookmark {
+  visibility: hidden;
+}
+
+.recipeImg {
+  width: 100% !important;
+  height: 200px;
+  object-fit: cover;
+}
+
+::ng-deep .mat-card-image {
+  margin: 0px -16px 5px -16px !important;
+}
+
+@media only screen and (max-width: 741px) {
+  .card-container {
+    width: 160px !important;
+    height: 180px !important;
+    padding: 4px !important;
+    justify-content: space-between !important;
+  }
+  
+  .img-container img {
+    object-fit: cover !important;
+    height: 125px !important;
+    margin-bottom: 0px !important;
+  }
+   .mat-card-header-text {
+    margin: auto !important;
+  }
+  .mat-card-actions {
+    margin-left: 2px;
+  }
+
+  .img-container {
+    .recipeImg {
+      opacity: 100%;
+    }
+  
+    .bookmark {
+      opacity: 100%;
+      visibility: visible;
+      position: absolute;
+      top: 5%;
+      right: 15%;
+      display: flex;
+      justify-content: center;
+      font-size: 25px !important;
+      color: $metal;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: $mint;
+    }
+  }
+}
+
+@media only screen and (min-width: 742px) {
+  .img-container:hover {
+    .recipeImg {
+      opacity: 70%;
+    }
+  
+    .bookmark {
+      opacity: 100%;
+      visibility: visible;
+      position: absolute;
+      top: 35%;
+      right: 50%;
+      display: flex;
+      justify-content: center;
+      font-size: 40px !important;
+      color: $powder;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<mat-dialog-content [formGroup]="newCollectionForm">
+    <mat-form-field class="input-example" appearance="fill">
+    <mat-label class="c-metal">Create Collection Name</mat-label>
+    <input matInput type="text" formControlName="collectionName" required style="width:100%;" placeholder="Input Collection Title">
+    <div class="mat-error"
+        *ngIf="newCollectionForm.get('collectionName').invalid && newCollectionForm.get('collectionName').touched">
+        </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="input-example" appearance="fill">
+        <mat-label class="c-metal">Collection Image</mat-label>
+        <input matInput type="text" formControlName="imageUrl" placeholder="URL of Collection Image">
+    </mat-form-field>
+<app-button [label]="'Create'" (clickEvent)="addCollection(collectionName)" [class]="'edit-button'"></app-button>
+</mat-dialog-content>
