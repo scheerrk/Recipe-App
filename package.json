@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/scheerrk/Recipe-App/issues"
   },
-  "homepage": "https://github.com/scheerrk/Recipe-App#readme"
+  "homepage": "https://github.com/scheerrk/Recipe-App#readme",
+  "dependencies": {
+    "@angular/cli": "^14.0.1"
+  }
 }
